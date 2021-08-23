@@ -1,0 +1,210 @@
+body{
+    margin: 0;
+    background-color: rgb(189, 217, 228);
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.header-container{
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(166, 204, 226);
+}
+.header-container-left{
+    align-items: center;
+}
+.header-container-left a{
+    text-decoration: none;
+    color:white;
+    margin-left: 10px;
+    font-size: 22px;
+}
+.header-container-right a{
+    color:white;
+    text-decoration: none;
+    margin-right:20px;
+    font-size: 22px;
+}
+.mobile-bar{
+    display: none;
+}
+.mobile-menu-container{
+    display: none;
+}
+
+/* home page */
+
+.bg_banner{
+    background-image: url("/img/scenery2.jpg");
+    height: 600px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-size: cover;
+
+}
+.bg_banner h2{
+    color: white;
+    font-style: italic; opacity: 30%;
+    font-size: 100px;
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+.mid-info{
+    margin:10px;
+}
+.mid-info h2{
+    text-align: center;
+    color:white;
+    background-color: rgb(56, 56, 131);
+    padding: 10px;
+}
+.mid-info p{
+    background-color: rgb(151, 183, 204);
+    padding:10px;
+}
+.mid-info-container{
+    grid-template-columns: repeat(6, 0.25fr);
+}
+
+/* about pages */
+
+.main-container{
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin: 20px;
+    /* border:solid; */
+}
+.lefty-box{
+    background-color: rgb(166, 204, 226);
+    height: 300px;
+    flex-direction: column;
+}
+.box-title{
+    background-color: rgb(56, 56, 131);
+}
+.box-title h4{
+    font-size: 20px;
+    color: white;
+}
+.mcc-upevnts{
+    display: grid;
+    grid-template-columns: 0.3fr 2fr;
+    margin-top: 10px;
+}
+.mcc-upevnts a{
+    text-decoration: none;
+    color: rgb(107, 101, 160);
+}
+.mcc-upevnts span{
+    color:rgb(33, 112, 108);
+}
+/* events page */
+
+.righty-container h2{
+    background-color: rgb(56, 56, 131);
+    color: white;
+    padding: 10px;
+}
+
+.boxes{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+.events-box{
+    background-color: rgb(166, 204, 226);
+}
+.events-box a{
+    color: white;
+    background-color: rgb(20, 80, 158);
+    text-decoration: none;
+    padding: 10px;
+    width: 100px;
+}
+/* MOBILE RESPONSIVE */
+@media (max-width: 425px){
+    /* mobile menu */
+    .show-menu {
+        animation: showMenu 1s ease-out;
+    }
+
+    .hide-menu {
+        animation: hideMenu .5s ease-out;
+    }
+
+    .mobile-menu-container {
+        background-color: rgb(73, 116, 172);;
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .mobile-menu-container .mobile-menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 3;
+    }
+
+    .mobile-menu-container .mobile-menu a{
+        color: black;
+        text-decoration: none;
+    }
+
+    .center-nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0.5rem;
+    }
+
+    #mobile-bar-cta {
+        font-size: 1.5rem;
+    }
+
+    .header-container-left nav{
+        display: none;
+    }
+    .header-container-right a{
+        display: none;
+    }
+
+    /* mobile about */
+    .main-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 1fr; 
+    }
+    .about-box p{
+        text-align: justify;
+    }
+    .boxes{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+footer{
+    text-align: center;
+    color:white;
+    background-color: rgb(8, 19, 48);
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
